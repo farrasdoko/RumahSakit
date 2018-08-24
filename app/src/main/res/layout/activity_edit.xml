@@ -9,6 +9,13 @@
     android:paddingRight="8dp"
     android:paddingTop="8dp">
     <TextView
+        android:id="@+id/tvId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Id: "
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_below="@id/edtId"
         android:id="@+id/tvNama"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -21,6 +28,12 @@
         android:text="Alamat : "
         android:layout_below="@id/edtNama"
         android:textSize="20sp"/>
+    <EditText
+        android:id="@+id/edtId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Id"
+        android:layout_below="@id/tvId"/>
     <EditText
         android:id="@+id/edtNama"
         android:layout_width="match_parent"

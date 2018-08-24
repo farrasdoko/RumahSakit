@@ -31,14 +31,14 @@ public class RumsakAdapter extends RecyclerView.Adapter<RumsakAdapter.MyViewHold
     public void onBindViewHolder (MyViewHolder holder,final int position){
         holder.mTextViewId.setText("Id = " + mRumsakList.get(position).getId());
         holder.mTextViewNama.setText("Nama = " + mRumsakList.get(position).getNama());
-        holder.mTextViewNomor.setText("Alamat = " + mRumsakList.get(position).getAlamat());
+        holder.mTextViewAlamat.setText("Alamat = " + mRumsakList.get(position).getAlamat());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent mIntent = new Intent(view.getContext(), EditActivity.class);
                 mIntent.putExtra("Id", mRumsakList.get(position).getId());
                 mIntent.putExtra("Nama", mRumsakList.get(position).getNama());
-                mIntent.putExtra("Nomor", mRumsakList.get(position).getAlamat());
+                mIntent.putExtra("Alamat", mRumsakList.get(position).getAlamat());
                 view.getContext().startActivity(mIntent);
             }
         });
@@ -50,13 +50,13 @@ public class RumsakAdapter extends RecyclerView.Adapter<RumsakAdapter.MyViewHold
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView mTextViewId, mTextViewNama, mTextViewNomor;
+        public TextView mTextViewId, mTextViewNama, mTextViewAlamat;
 
         public MyViewHolder(View itemView) {
             super(itemView);
             mTextViewId = (TextView) itemView.findViewById(R.id.tvId);
             mTextViewNama = (TextView) itemView.findViewById(R.id.tvNama);
-            mTextViewNomor = (TextView) itemView.findViewById(R.id.tvAlamat);
+            mTextViewAlamat = (TextView) itemView.findViewById(R.id.tvAlamat);
         }
     }
 }

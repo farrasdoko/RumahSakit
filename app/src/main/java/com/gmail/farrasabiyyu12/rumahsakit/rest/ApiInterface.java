@@ -21,7 +21,8 @@ public interface ApiInterface {
                                       @Field("alamat") String alamat);
     @FormUrlEncoded
     @PUT("update_data.php")
-    Call<PostPutDelRumsak> putRumsak(@Field("nama") String nama,
+    Call<PostPutDelRumsak> putRumsak(@Field("id") String id,
+                                     @Field("nama") String nama,
                                      @Field("alamat") String alamat);
     @FormUrlEncoded
     @HTTP(method = "DELETE", path = "delete_data.php", hasBody = true)

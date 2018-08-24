@@ -40,6 +40,7 @@ public class EditActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Call<PostPutDelRumsak> updateRumsakCall = mApiInterface.putRumsak(
+                        edtId.getText().toString(),
                         edtNama.getText().toString(),
                         edtAlamat.getText().toString());
                 updateRumsakCall.enqueue(new Callback<PostPutDelRumsak>() {
